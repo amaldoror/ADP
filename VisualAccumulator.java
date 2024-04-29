@@ -1,4 +1,4 @@
-package adp
+package adp;
 
 public class VisualAccumulator extends SimpleAccumulator implements Accumulator {
 

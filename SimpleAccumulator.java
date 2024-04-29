@@ -1,4 +1,6 @@
-package adp
+package adp;
+
+import adp.Accumulator;
 
 public class SimpleAccumulator implements Accumulator {
 	private int N=0;

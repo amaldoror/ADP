@@ -1,4 +1,4 @@
-package adp
+package adp;
 
 public interface Accumulator {
 	

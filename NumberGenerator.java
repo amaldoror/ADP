@@ -1,3 +1,5 @@
+package adp;
+
 import java.util.Random;
 
 public class NumberGenerator {
