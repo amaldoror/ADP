@@ -2,3 +2,5 @@
 
 ### Algorithmen & Datenstrukturen Praktikum
 
+<code>javac <CLASS.java></code><br>
+<code>java [-cp] [.] <CLASS></code><br>
