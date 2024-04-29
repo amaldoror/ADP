@@ -3,9 +3,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class AccumulatorClient {
+	
     public static void main(String[] args) {
+		
         if (args.length < 1) {
-            System.err.println("Usage: java AccumulatorClient <accumulatorType> [N] [maxValue]");
+            System.err.println("Usage: java -cp . AccumulatorClient <accumulatorType> [N] [maxValue]");
             return;
         }
 
