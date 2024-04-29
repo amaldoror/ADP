@@ -4,8 +4,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Filtert einen Eingabe-Stream und sortiert alle ungeraden und nicht-Ganzzahlen aus.
+ */
 public class NPlusEvenFilter {
     public static void filterAndPrint(List<Integer> list)  {
+        //Filter alle ungeraden Objekte heraus.
         list = list.stream().filter(n -> n > 0 && n % 2 == 0)
                 .toList();
         for (Integer n : list) {
@@ -14,9 +18,7 @@ public class NPlusEvenFilter {
     }
 
     public static void main(String[] args) throws IOException {
-        List<Integer> integers = new ArrayList<>();
-
-        integers = Helper.getIntegersListFromStdIn();
+        ArrayList<Integer> integers = Helper.getIntegersListFromStdIn();
         filterAndPrint(integers);
     }
 }
