@@ -45,7 +45,7 @@ public class NumberGenerator {
      * Generiert eine gleichmäßige Mischung aus Integer und Doubles.
      * @param N Anzahl der Werte
      */
-    public void gernerateIntegerAndDoubles(int N) {
+    public void generateIntegerAndDoubles(int N) {
         for (int i = 0; i < N; i++) {
             if(random.nextBoolean()) {
                 generateIntegers(1);
@@ -72,6 +72,6 @@ public class NumberGenerator {
 
         NumberGenerator generator = new NumberGenerator(min, max);
 
-        generator.gernerateIntegerAndDoubles(N);
+        generator.generateIntegerAndDoubles(N);
     }
 }

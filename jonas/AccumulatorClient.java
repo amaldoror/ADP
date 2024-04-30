@@ -3,6 +3,8 @@ package adp.jonas;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
+import edu.princeton.cs.algs4.Accumulator;
 
 /**
  * Liest Zahlen aus einem Eingabe-Stream aus und gibt diese an den entsprechenden (und dafür erstellten)
@@ -19,19 +21,33 @@ public class AccumulatorClient {
      */
     public static void main(String[] args) {
         //Argumente Verarbeitung.
-        int version,trials,maxValue;
+        int version,trials=0,maxValue=Integer.MIN_VALUE;
         List<Integer> integers = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        while(scanner.hasNext()){
+
+            int num;
+            String input = scanner.next();
+            try {
+                num = Integer.parseInt(input);
+                integers.add(num);
+                trials++;
+                maxValue = Math.max(num, maxValue);
+
+            }
+            catch (NumberFormatException nfe) {
+
+            }
+
+        }
         if (args.length == 3) {
             version = Integer.parseInt(args[0]);
             trials = Integer.parseInt(args[1]);
             maxValue = Integer.parseInt(args[2]);
-            integers = Helper.getIntegersListFromStdIn();
+
         }
         else if (args.length == 1) {
             version = Integer.parseInt(args[0]);
-            integers = Helper.getIntegersListFromStdIn();
-            maxValue = Collections.max(integers);
-            trials = integers.size();
         }
         else {
             System.out.println("""

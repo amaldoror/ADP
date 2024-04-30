@@ -1,3 +1,5 @@
+package adp;
+
 import java.util.Arrays;
 
 public class LocalMax {
@@ -7,11 +9,16 @@ public class LocalMax {
         int[] ary2 = {1, 61, 16, 75, 89, 133, 89, 59, 28, 3, 3, 97, 61, 85, 47, 38, 78, 7, 6, 15};
         int[] ary3 = {99, 1, 61, 89, 75, 16, 33, 89, 59, 28, 3, 3, 97, 61, 85, 47, 38, 78, 7, 6, 15};
 
-        int[] result1 = findLocalMax(ary1, 0, 4, 2);
-        int[] result2 = findLocalMax(ary2, 3, 9, 3);
-        int[] result3 = findLocalMax(ary3, 1, 6, 1);
+        int[] result1 = findLocalMax(ary1, 0, 20, 2);
+        int[] result2 = findLocalMax(ary2, 0, 20, 3);
+        int[] result3 = findLocalMax(ary3, 0, 20, 1);
+        System.out.println(Arrays.toString(result1));
+        System.out.println(Arrays.toString(result2));
+        System.out.println(Arrays.toString(result3));
     }
 
+
+//System.out.println("Ergebnis:" + printArray(array, index - radius, index + radius, index));
     /**
 	 * Findet ein lokales Maximum in einem Array innerhalb eines bestimmten Suchbereichs.
      *
@@ -19,7 +26,7 @@ public class LocalMax {
      * @param lo Minimaler Index des Suchbereiches
      * @param hi Maximaler Index des Suchbereiches
      * @param radius Suchradis um den Mittelpunkt der Werte
-     * @return Ausgabe des gefunden Bereiches, falls Algorithmus erfolgreich. Sonst null
+     * @return Ausgabe des gefundenen Bereiches, falls Algorithmus erfolgreich. Sonst null
      */
     public static int[] findLocalMax(int[] array, int lo, int hi, int radius){
         
@@ -52,10 +59,9 @@ public class LocalMax {
             }
         }
 
-		// Ergebnisrückgabe wenn lokales Maximum gefunden wurde
+		// Ergebnisrückgabe, wenn lokales Maximum gefunden wurde
         if(localMaxFound) {
-            System.out.println("Ergebnis:" + printArray(array, index - radius, index + radius, index));
-			return Arrays.copyOfRange(array, index - radius, index + radius);
+			return Arrays.copyOfRange(array, index - radius, index + radius+1);
 		}
 
 		// Lokales Minimum links und rechts finden und vergleichen.
