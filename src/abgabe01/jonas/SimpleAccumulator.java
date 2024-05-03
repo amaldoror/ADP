@@ -1,4 +1,4 @@
-package adp.jonas;
+package abgabe01.jonas;
 
 import edu.princeton.cs.algs4.Accumulator;
 

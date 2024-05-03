@@ -1,7 +1,7 @@
-package adp.jonas;
+package abgabe01.jonas;
 
 import edu.princeton.cs.algs4.StdDraw;
-import edu.princeton.cs.algs4.Accumulator;
+
 import java.awt.*;
 
 

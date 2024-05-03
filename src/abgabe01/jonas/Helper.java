@@ -1,4 +1,4 @@
-package adp.jonas;
+package abgabe01.jonas;
 
 import java.io.BufferedReader;
 import java.io.IOException;

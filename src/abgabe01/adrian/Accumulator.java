@@ -1,4 +1,4 @@
-package adp;
+package abgabe01.adrian;
 
 public interface Accumulator {
 	

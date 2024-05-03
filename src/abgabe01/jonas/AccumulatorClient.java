@@ -1,10 +1,8 @@
-package adp.jonas;
+package abgabe01.jonas;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import edu.princeton.cs.algs4.Accumulator;
 
 /**
  * Liest Zahlen aus einem Eingabe-Stream aus und gibt diese an den entsprechenden (und dafür erstellten)
