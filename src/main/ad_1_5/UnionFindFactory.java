@@ -1,6 +1,6 @@
 package ad_1_5;
 
-import abgabe02.QuickUnionWithPathCompression;
+import abgabe02.adrian.QuickUnionPC;
 
 /**
  * Factory für folgende Algorithmen: <br>
@@ -23,7 +23,7 @@ public class UnionFindFactory {
             case 1 -> new QuickFind(n);
             case 2 -> new QuickUnion(n);
             case 3 -> new WeightedQuickUnion(n);
-            //case 4 -> new QuickUnionWithPathCompression(n);
+            case 4 -> new QuickUnionPC(n);
             default -> throw new IllegalArgumentException("unbekannter UF Algorithmus");
         };
     }

@@ -1,5 +1,6 @@
 package ad_1_4;
 
+import abgabe02.adrian.DoublyLinkedList;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
@@ -17,7 +18,7 @@ public class DoublingTest {
         for (int N = 250; true; N+=N){
             if (N>=MAX) break;
             // Zeit für Problemgröße N
-            double time = trialTime(N);
+            double time = trialTimeAdd(N);
             StdOut.printf("%7d %5.1f\n",N,time);
         }
     }
@@ -30,13 +31,20 @@ public class DoublingTest {
      * @param N Anzahl Datenpunkte
      * @return Rückgabewert
      */
-    private static double trialTime(int N){
+    private static double trialTimeAdd(int N){
         int MAX = 1000000;
-        int[] a = new int[N];
-        for (int i = 0; i < N; i++)
-            a[i] = StdRandom.uniformInt(-MAX, +MAX);
-        Stopwatch timer = new Stopwatch();
-        ThreeSum.count(a);
+        DoublyLinkedList<Integer> dll = new DoublyLinkedList<>();
+        Integer randInteger;
+
+        for (int i = 0; i < N; i++) {       // N zufällige Zahlen von -MAX bis MAX einfügen
+            randInteger = StdRandom.uniformInt(-MAX, +MAX);
+            dll.add(randInteger);
+        }
+        Stopwatch timer = new Stopwatch();  // Stoppuhr gestartet
+        for (int i = 0; i < N-1; i++) {
+
+        }
         return timer.elapsedTime();
     }
+
 }

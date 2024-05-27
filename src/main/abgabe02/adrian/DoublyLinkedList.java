@@ -1,4 +1,4 @@
-package abgabe02;
+package abgabe02.adrian;
 
 import java.util.AbstractList;
 import java.util.Collection;
@@ -30,6 +30,7 @@ public class DoublyLinkedList<T> extends AbstractList<T> {
         this.tail = new Node<>(null);
         this.head.next = tail;
         this.tail.prev = head;
+        this.size = 0;
     }
 
     // Verallgemeinerter Kopier-Konstruktor für Collections
@@ -75,31 +76,19 @@ public class DoublyLinkedList<T> extends AbstractList<T> {
 
     @Override
     public void add(int index, T element) {
-        checkIndex(index);
-
-        if (index == 0){
-            // Wenn das Element am Anfang hinzugefügt wird, aktualisiere den Kopf
-            Node<T> newNode = new Node<>(element);
-            newNode.next = head.next;
-            newNode.prev = head;
-            head.next.prev = newNode;
-            head.next = newNode;
-            size++;
-            return;
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size());
         }
 
         Node<T> newNode = new Node<>(element);
-        Node<T> current = head;
+        Node<T> current = (index == size) ? tail : getNode(index);
 
-        for (int i = 0; i < index; i++) {
-            current = current.next;
-        }
-
-        newNode.prev = current;
-        newNode.next = current.next;
-        current.next.prev = newNode;
-        current.next = newNode;
+        newNode.prev = current.prev;
+        newNode.next = current;
+        current.prev.next = newNode;
+        current.prev = newNode;
         size++;
+        System.out.println("Added " + element + " to index " + index);
     }
 
     @Override
@@ -152,9 +141,12 @@ public class DoublyLinkedList<T> extends AbstractList<T> {
     }
 
     private Node<T> getNode(int index) {
-        if (index < 0 || index >= size()) {
+        if (index < 0 || index > size()) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size());
         }
+        if(index == 0) return head;
+        if(index == size - 1) return tail;
+
         Node<T> current = head.next;
         for (int i = 0; i < index; i++) {
             current = current.next;

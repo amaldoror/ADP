@@ -1,4 +1,4 @@
-package abgabe02;
+package abgabe02.adrian;
 import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
