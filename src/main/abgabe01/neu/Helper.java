@@ -1,4 +1,4 @@
-package abgabe01.jonas;
+package abgabe01.neu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class Helper {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
         return integers;
     }

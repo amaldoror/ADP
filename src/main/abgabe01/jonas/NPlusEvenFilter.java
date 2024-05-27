@@ -1,10 +1,6 @@
 package abgabe01.jonas;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -25,10 +21,11 @@ public class NPlusEvenFilter {
                     }
                 }
                 catch (NumberFormatException nfe) {
-
+                    System.out.println(nfe.getMessage());
                 }
 
         }
+        scanner.close();
         /*
         list = list.stream().filter(n -> n > 0 && n % 2 == 0)
                 .toList();

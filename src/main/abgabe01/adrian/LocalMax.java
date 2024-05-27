@@ -111,7 +111,7 @@ public class LocalMax {
 		}
 		result.append("]");
 
-		return "Ergebnis:" + result.toString();
+		return "Ergebnis:" + result;
 	}
 
 }
