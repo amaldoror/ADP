@@ -29,6 +29,7 @@ public class NPlusEvenFilter {
                 }
 
         }
+        scanner.close();
         /*
         list = list.stream().filter(n -> n > 0 && n % 2 == 0)
                 .toList();

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 /**
  * Liest Zahlen aus einem Eingabe-Stream aus und gibt diese an den entsprechenden (und dafür erstellten)
  * Akkumulator weiter.
@@ -34,7 +35,7 @@ public class AccumulatorClient {
 
             }
             catch (NumberFormatException nfe) {
-
+                System.out.println(nfe.getMessage());
             }
 
         }
