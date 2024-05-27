@@ -1,24 +1,19 @@
 package abgabe02;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import java.util.*;
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-
+import org.junit.jupiter.api.*;
 
 public class DoublyLinkedListTest {
     String[] arr = {"one", "two", "three"};
     DoublyLinkedList<String> list;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         list = new DoublyLinkedList<>(Arrays.stream(arr).toList());
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         list = null;
     }
