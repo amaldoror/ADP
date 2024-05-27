@@ -1,4 +1,4 @@
-package adp.src.main.util;
+package util;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ public class ReadBinaryFile {
                 System.out.println(i);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 }

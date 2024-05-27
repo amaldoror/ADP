@@ -1,10 +1,6 @@
 package abgabe01.jonas;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -25,7 +21,7 @@ public class NPlusEvenFilter {
                     }
                 }
                 catch (NumberFormatException nfe) {
-
+                    System.out.println(nfe.getMessage());
                 }
 
         }

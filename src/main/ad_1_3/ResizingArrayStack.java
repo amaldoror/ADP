@@ -1,4 +1,4 @@
-package adp.src.main.ad_1_3;
+package ad_1_3;
 
 import java.util.Iterator;
 

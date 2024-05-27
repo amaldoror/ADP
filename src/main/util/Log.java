@@ -1,4 +1,4 @@
-package adp.src.main.util;
+package util;
 
 public class Log {
     public static System.Logger logger = System.getLogger("Logger");

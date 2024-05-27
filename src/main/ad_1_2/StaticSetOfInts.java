@@ -1,4 +1,4 @@
-package adp.src.main.ad_1_2;
+package ad_1_2;
 
 import java.util.Arrays;
 
