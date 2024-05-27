@@ -12,7 +12,8 @@ public class SortClassCommons {
      * @param <T>
      */
     public static <T extends Comparable<? super T>> void sort(T[] a){
-
+        // TODO implement sort method
+        System.out.println("Sorting lol");
     }
     /**
      * Die Methode prüft welches der Elemente a und b kleiner ist. <br>

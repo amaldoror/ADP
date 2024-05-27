@@ -6,7 +6,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class STTestClient {
     public static void main(String[] args) {
 // String testString = "S E A R C H E X A M P L E";
-        int type = Integer.valueOf(args[0]);
+        int type = Integer.parseInt(args[0]);
         STInterface<String, Integer> st =
                 STFactory.getSTInstance(type);
         for (int i = 0; !StdIn.isEmpty(); i++) {

@@ -13,9 +13,6 @@ public class DoublyLinkedList<T> extends AbstractList<T> {
     private Node<T> tail;   // Wächterknoten am Ende
     private int size;       // Zähler für die Anzahl der Elemente in der Liste
 
-    public static void main(String[] args) {
-
-    }
 
     private static class Node<T> {
         T element;

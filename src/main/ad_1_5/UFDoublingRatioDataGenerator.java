@@ -29,8 +29,8 @@ public class UFDoublingRatioDataGenerator {
             UF uf = UnionFindFactory.getInstance(3,n); 
             Out f = new Out(filename(n));
             while (uf.count() > 1) {
-                int p = StdRandom.uniform(0, n);
-                int q = StdRandom.uniform(0, n);
+                int p = StdRandom.uniformInt(0, n);
+                int q = StdRandom.uniformInt(0, n);
                 if (!uf.connected(p,q)) {
                     uf.union(p, q);
                     f.println(p);

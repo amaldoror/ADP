@@ -47,9 +47,7 @@ public class FixedCapacityStack<Item> {
 
     private void resize(int max) {
         Item[] newA = (Item[]) new Object[max];
-        for (int i =0; i < N; i++) {
-            newA[i] = a[i];
-        }
+        if (N >= 0) System.arraycopy(a, 0, newA, 0, N);
         a = newA;
     }
 

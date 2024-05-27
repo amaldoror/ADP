@@ -1,5 +1,7 @@
 package ad_1_5;
 
+import abgabe02.QuickUnionWithPathCompression;
+
 /**
  * Factory für folgende Algorithmen: <br>
  * type 1: QuickFind(n) <br>
@@ -17,17 +19,12 @@ public class UnionFindFactory {
      * type 4: QuickUnionWithPathCompression(n) <br>
      */
     public static UF getInstance(int type, int n) {
-        switch (type) {
-            case 1:
-                return new QuickFind(n);
-            case 2:
-                return new QuickUnion(n);
-            case 3:
-                return new WeightedQuickUnion(n);
-           // case 4:
-           //     return new QuickUnionWithPathCompression(n);
-            default:
-                throw new IllegalArgumentException("unbekannter UF Algorithmus");
-        }
+        return switch (type) {
+            case 1 -> new QuickFind(n);
+            case 2 -> new QuickUnion(n);
+            case 3 -> new WeightedQuickUnion(n);
+            //case 4 -> new QuickUnionWithPathCompression(n);
+            default -> throw new IllegalArgumentException("unbekannter UF Algorithmus");
+        };
     }
 }

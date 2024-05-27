@@ -49,14 +49,13 @@ public class SequentialSearchST<Key,Val> implements STInterface<Key ,Val> {
         if (!isEmpty()) {
             if (first.key.equals(key)) {
                 first = first.next;
-                n--;
             } else {
                 Node pred = first;
                 while (pred.next != null && !pred.next.key.equals(key)) pred = pred.next;
                 if (pred.next == null) return;
                 pred.next = pred.next.next;
-                n--;
             }
+            n--;
         }
     }
 

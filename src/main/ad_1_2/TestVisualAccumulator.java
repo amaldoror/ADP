@@ -8,7 +8,7 @@ public class TestVisualAccumulator {
         int T = Integer.parseInt(args[0]);
         Accumulator acc = new VisualAccumulator(T,1.0);
         for (int i =0; i < T; i++) {
-            acc.addDataValue(StdRandom.uniform());
+            acc.addDataValue(StdRandom.uniformDouble());
         }
         StdOut.println(acc);
     }

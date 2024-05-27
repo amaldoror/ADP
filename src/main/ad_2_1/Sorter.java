@@ -13,33 +13,19 @@ public enum Sorter {
     HEAP;
 
     public Class<?> getSorterClass() {
-        switch (this) {
-            case SELECTION:
-                return Selection.class;
-            case INSERTION:
-                return Insertion.class;
-            case SHELL:
-                return Shell.class;
-            case MERGE:
-                return Merge.class;
-            case MERGEBU:
-                return MergeBU.class;
-            case QUICK:
-                return Quick.class;
-            case QUICKINSERTION:
-                return null;
-            case QUICKMEDIAN3:
-                return null;
-            case QUICKMEDIAN3INSERTION:
-                return null;
-            case QUICK3WAY:
-                return Quick3way.class;
-            case QUICK3WAYINSERTION:
-                return null;
-            case HEAP:
-                return Heap.class;
-            default:
-                return null;
-        }
+        return switch (this) {
+            case SELECTION -> Selection.class;
+            case INSERTION -> Insertion.class;
+            case SHELL -> Shell.class;
+            case MERGE -> Merge.class;
+            case MERGEBU -> MergeBU.class;
+            case QUICK -> Quick.class;
+            case QUICKINSERTION -> null;
+            case QUICKMEDIAN3 -> null;
+            case QUICKMEDIAN3INSERTION -> null;
+            case QUICK3WAY -> Quick3way.class;
+            case QUICK3WAYINSERTION -> null;
+            case HEAP -> Heap.class;
+        };
     }
 }

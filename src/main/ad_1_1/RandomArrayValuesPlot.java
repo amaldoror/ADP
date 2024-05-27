@@ -13,7 +13,7 @@ public class RandomArrayValuesPlot {
         StdDraw.setPenColor(Color.RED);
 
         for (int i = 0; i < N; i++) {
-            a[i] = StdRandom.uniform();
+            a[i] = StdRandom.uniformDouble();
         }
 
         for (int i = 0; i < N ; i ++) {

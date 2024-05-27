@@ -4,14 +4,13 @@ import edu.princeton.cs.algs4.QuickUnionUF;
 
 public class QuickUnionWithPathCompression extends QuickUnionUF {
     private int[] parent;
-    private int[] size;
     private int count;
 
     public QuickUnionWithPathCompression(int n) {
         super(n);
         count = n;
         parent = new int[n];
-        size = new int[n];
+        int[] size = new int[n];
         for (int i = 0; i < n; i++) {
             parent[i] = i;
             size[i] = 1;

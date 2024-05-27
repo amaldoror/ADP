@@ -1,15 +1,15 @@
 package ad_1_5;
 
 public interface UF {
-    public boolean connected(int p, int q);
+    boolean connected(int p, int q);
 
     // Komponentenbezeichner für p
-    public int find(int p);
+    int find(int p);
 
     // Verbindet zwei Komponenten zu einer Komponente
-    public void union(int p, int q);
+    void union(int p, int q);
 
     // Zaehlt die Anzahl der Komponenten
-    public int count();
+    int count();
 
 }

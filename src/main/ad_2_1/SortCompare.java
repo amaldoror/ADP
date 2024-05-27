@@ -65,9 +65,9 @@ public class SortCompare {
         Set<Double> controlSet = new HashSet<>();
         Double[] a = new Double[length];
         for (int i = 0; i < length; i++) {
-            double d = StdRandom.uniform();
+            double d = StdRandom.uniformDouble();
             while (!controlSet.add(d)) {
-                d = StdRandom.uniform();
+                d = StdRandom.uniformDouble();
             }
             a[i] = d;
         }

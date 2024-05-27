@@ -29,7 +29,7 @@ public class Helper {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
         return integers;
     }

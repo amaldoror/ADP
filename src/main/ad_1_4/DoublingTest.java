@@ -11,9 +11,11 @@ import edu.princeton.cs.algs4.Stopwatch;
  * - Zeitmessung für Problemgröße N <br>
  */
 public class DoublingTest {
+    private static final int MAX = 100000;
     public static void main(String[] args){
 
         for (int N = 250; true; N+=N){
+            if (N>=MAX) break;
             // Zeit für Problemgröße N
             double time = trialTime(N);
             StdOut.printf("%7d %5.1f\n",N,time);

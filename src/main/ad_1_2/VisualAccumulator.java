@@ -17,11 +17,10 @@ public class VisualAccumulator extends SimpleAccumulator implements Accumulator 
     @Override
     public void addDataValue(double d) {
         N++;
-        double total = d;
         StdDraw.setPenColor(Color.DARK_GRAY);
         StdDraw.point(N,d);
         StdDraw.setPenColor(Color.RED);
-        StdDraw.point(N,total/N);
+        StdDraw.point(N, d /N);
     }
 
     public static void main(String[] args) {
