@@ -73,7 +73,7 @@ public class DoubleLinkedList<E> extends AbstractList<E> {
     public void add(int index, E element) {
         checkPositionIndex(index);
         if (index == size) {
-            addLast(element);
+            addAtEnd(element);
         } else {
             addBefore(getNode(index), element);
         }
@@ -82,7 +82,7 @@ public class DoubleLinkedList<E> extends AbstractList<E> {
     // Fügt ein Element ganz am Ende der Liste ein.
     @Override
     public boolean add(E element) {
-        addLast(element);
+        addAtEnd(element);
         return true;
     }
 
@@ -96,7 +96,7 @@ public class DoubleLinkedList<E> extends AbstractList<E> {
     // Hilfsmethode, die eine Knoten vor einen anderen Knoten einfügt.
     // Dafür wird erst ein neuer Knoten mit den übergebenen Daten erstellt und dann die Pointer aktualisiert,
     // sodass der neue Knoten vor dem alten steht.
-    private void addLast(E element) {
+    private void addAtEnd(E element) {
         addBefore(tail, element); // Fügt das Element vor dem tail-Wächterknoten ein
     }
 

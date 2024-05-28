@@ -4,7 +4,7 @@ package abgabe02.adrian;
 import abgabe02.jonas.DoubleLinkedList;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
-import edu.princeton.cs.algs4.Stopwatch;
+import abgabe02.jonas.Stopwatch;
 
 import java.util.LinkedList;
 
